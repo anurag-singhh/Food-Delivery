@@ -5,7 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const Add = () => {
-  const url = "http://localhost:4000";
+  const url = import.meta.env.VITE_APP_URL;
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
     name: "",

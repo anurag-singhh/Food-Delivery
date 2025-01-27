@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const List = () => {
-  const url = "http://localhost:4000";
+  const url = import.meta.env.VITE_APP_URL;
   const [list, setList] = useState([]);
   console.log(list);
 
@@ -51,7 +51,7 @@ const List = () => {
               <img src={`${url}/images/` + item.image} alt="" />
               <p>{item.name}</p>
               <p>{item.category}</p>
-              <p>${item.price}</p>
+              <p>₹{item.price}</p>
               <p onClick={() => removeFood(item._id)} className="cursor">
                 X
               </p>
